@@ -1,0 +1,22 @@
+{
+  "name": "monorepo-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint 'packages/**/*.{ts,tsx}' 'apps/**/*.{ts,tsx}' --fix",
+    "format": "prettier --write 'packages/**/*.{ts,tsx,js,jsx,json,css}' 'apps/**/*.{ts,tsx,js,jsx,json,css}'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "nx": "^17.0.2",
+    "prettier": "^3.0.3"
+  }
+}
