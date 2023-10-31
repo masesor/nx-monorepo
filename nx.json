@@ -3,23 +3,44 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "test"]
+        "cacheableOperations": [
+          "build",
+          "test"
+        ]
       }
     }
   },
   "namedInputs": {
-    "noMarkdown": ["!{projectRoot}/**/*.md"]
+    "noMarkdown": [
+      "!{projectRoot}/**/*.md"
+    ]
   },
   "targetDefaults": {
     "build": {
-      "inputs": ["noMarkdown", "^noMarkdown"],
-      "dependsOn": ["^build"]
+      "inputs": [
+        "noMarkdown",
+        "^noMarkdown"
+      ],
+      "dependsOn": [
+        "^build"
+      ]
     },
-    "dev": {
-      "dependsOn": ["^build"]
+    "serve": {
+      "dependsOn": [
+        "^build"
+      ]
     },
     "test": {
-      "inputs": ["noMarkdown", "^noMarkdown"]
+      "inputs": [
+        "noMarkdown",
+        "^noMarkdown"
+      ]
+    },
+    "install": {
+      "cache": true
     }
-  }
+  },
+  "plugins": [
+    "@nxrocks/nx-spring-boot"
+  ]
 }
